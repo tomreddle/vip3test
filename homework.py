@@ -37,9 +37,9 @@ for i in range(1,11):
     a = a * i
 print(a)
 
-#s = []
+s = []
 for i in range(101):
-    if i%3 == 0:
+    if i % 3 == 0:
         s.append(i)
 print(s)
 
@@ -53,11 +53,19 @@ for i in s1:
         j = j +1
 print(s1)
 
-
+s3 = [1,2,3,4,3,4,2,5,5,8,9,7]
+s0 = []
+for i in s3:
+    if i in s0:
+        continue
+    else:
+        s0.append(i)
+print('***********')
+print(s0)
 #求斐波那契数列 1 2 3 5 8 13 ……
 i = 1
 s2 = [1,2]
-a1 =  int(input("请录入您想循环的次数："))
+a1 = int(input("请录入您想循环的次数："))
 while i :
     a = s2[i] + s2[i-1]
     s2.append(a)
@@ -70,14 +78,14 @@ print(s2)
 #求10000以内的质数
 #质数只能被1和其自身整除
 #x = int(input('>>>>'))
-s = []
-s1 = list(range(2,100000))
-for n in s1:
+s4 = []
+s5 = list(range(2,100000))
+for n in s5 :
     j = 0
     for i in range(2,n):
         if n % i == 0:
             j = j + 1
             break
     if j == 0:
-        s.append(n)
-print(s)
+        s4.append(n)
+print(s4)
