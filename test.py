@@ -145,5 +145,15 @@ print(sss)
 sss.clear()
 print(sss)
 
-h = input('>>>')
-print(int(h))
+# h = input('>>>')
+# print(int(h))
+
+#字典
+s = {'a':10,'b':20}
+print(s['a'])
+#取出所有键
+print(s.keys())
+#取出所有值
+print(s.values())
+#取出所有键值对，组成一个新的list输出
+print(s.items())
