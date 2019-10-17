@@ -151,3 +151,32 @@ class Soldier:
 ryen = Soldier('瑞恩', 'AK47')
 ryen.shoot(10)
 
+
+# 读取文件内容
+with open(r'E:\code\test.txt', 'r') as test:
+    # 定义列表存放L开头的姓名
+    l = []
+    # 定义列表存放出生日期
+    age = []
+    # 定义列表存放女性信息
+    female = []
+    s = test.readlines()
+    print(s)
+    for i in s:
+        print(i)
+        if i.find('L') != -1:
+            l.append(i.split('|')[0])
+        age.append(i.split('|')[-1].strip())
+        if i.find('女') != -1:
+            female.append(i.strip())
+    # for line in test:
+    #     # line.strip()
+    #     str3 = line.strip().split('|')
+    #     if line.find('l') != -1:
+    #         l.append(str3[0])
+    #     age.append(age.append(str3[-1]))
+    print(l)
+    print(sorted(age))
+    print(female)
+    # print(L)
+
