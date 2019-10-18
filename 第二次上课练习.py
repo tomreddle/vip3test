@@ -178,5 +178,41 @@ with open(r'E:\code\test.txt', 'r') as test:
     print(l)
     print(sorted(age))
     print(female)
+    # for line in test:
+    #     # line.strip()
+    #     str3 = line.strip().split('|')
+    #     if line.find('l') != -1:
+    #         l.append(str3[0])
+    #     age.append(age.append(str3[-1]))
     # print(L)
 
+print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+# 任务1-找出所有L开头的人名
+# 任务2-按照年龄进行排序
+# 任务3-找出所有女性用户的信息
+f = open(r'E:\code\data1.txt', 'r')
+s = f.readlines()
+# print(s)
+f.close()
+s1 = []
+for i in s:
+    s1.append(i.strip().split('|'))
+for j in range(len(s1) - 1):
+    for i in range(len(s1) - 1):
+        if s1[i][-1] > s1[i + 1][-1]:
+            c = s1[i]
+            s1[i] = s1[i + 1]
+            s1[i + 1] = c
+s2 = []
+for i in s1:
+    s2.append('|'.join(i))
+print('按年龄从大到小排列{}'.format(s2))
+s3 = []
+s4 = []
+for i in s:
+    if '女' in i:
+        s3.append(i.strip())
+    if i.find('L') != -1:
+        s4.append(i.strip())
+print('女性信息{}'.format(s3))
+print('姓名中带L人员信息{}'.format(s4))
