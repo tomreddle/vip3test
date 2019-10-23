@@ -212,7 +212,7 @@ s4 = []
 for i in s:
     if '女' in i:
         s3.append(i.strip())
-    if i.find('L') != -1:
+    if i.startswith('L'):
         s4.append(i.strip())
 print('女性信息{}'.format(s3))
 print('姓名中带L人员信息{}'.format(s4))

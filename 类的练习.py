@@ -35,28 +35,32 @@
 # Tony = Student(10)
 # Tony.study('高数')
 
+
 class Person():
     #__init__方法默认执行
      def __init__(self,name,sex):
          self.name = name
          self.sex = sex
 
-     def eat(self,food):
-         print('{}吃{}'.format(self.name,food))
+     def eat(self, food):
+         print('{}吃{}'.format(self.name, food))
+
      def sleep(self):
          print('睡觉')
 
+
 class Teacher(Person):
-    def __init__(self,gh,name,sex):
-        Person.__init__(self,name,sex)
+    def __init__(self, gh, name, sex):
+        Person.__init__(self, name, sex)
         self.gh = gh
 
-    def teach(self,class_name,work_place,salary):
-        print('gh为{}的老师，教{}课'.format(self.gh,class_name))
-        print('gh为{}老师，在{}上班，一月工资{}'.format(self.gh,work_place,salary))
-        print('名字是{}，工号为{}的老师，吃饭'.format(self.name,self.gh))
+    def teach(self, class_name, work_place, salary):
+        print('gh为{}的老师，教{}课'.format(self.gh, class_name))
+        print('gh为{}老师，在{}上班，一月工资{}'.format(self.gh, work_place, salary))
+        print('名字是{}，工号为{}的老师，吃饭'.format(self.name, self.gh))
 
-t = Teacher('10','Ms.Wang','female')
+
+t = Teacher('10', 'Ms.Wang', 'female')
 t.teach('数学', '教室', '1000')
 
 
