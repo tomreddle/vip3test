@@ -86,15 +86,18 @@ print(''.join(title))
 
 links = re.findall('href="(.*?)"', html)
 print(links)
-for i in links:
-    print(i)
+# for i in links:
+#     print(i)
 
 # sun() 和subn() 搜索和替换
 print(re.sub('X', 'Mr.Smith', 'attn:X\n\nDear X, \n'))
 print(re.subn('X', 'Mr.Smith', 'attn:X\n\nDear X, \n'))   # 返回替换次数
 
 
-print(re.search('\bthe', 'bite the dog').group())
+# print(re.search('\bthe', 'thebite the dog').group())
 
+pattern = re.compile(r'\d+')
+m = pattern.match('ab1233')
+print(m)
 
-
+print(pattern.match('ab1233', 2,))
