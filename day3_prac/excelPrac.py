@@ -1,5 +1,17 @@
 # 导入
 import xlrd,xlwt
+from common.readExcel import *
+
+path = r'C:\Users\hyr\Desktop\learning\第三天'
+file_name = 'data.xls'
+# 对象实例化
+case_excel = Readexcel(path, file_name)
+payment = case_excel.tatol()
+print(payment)
+
+
+
+
 
 # 读取excel
 # 打开excel  open
