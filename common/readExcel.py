@@ -1,5 +1,5 @@
 # 实现从excel中读取数据并返回对应的接口数据列表
-import xlrd
+import xlrd, os
 # 读取excel先定位excel的位置和名称   路径 和名称
 # 获取excel中所有sheet的名称列表  然后去判断sheet的数量(可用于循环)
 # 循环实现读取每一个sheet中的内容
@@ -65,4 +65,7 @@ if __name__ == '__main__':
     print(a.readparasheet())
     print(a.readassertsheet())
     print(a.tatol())
+
+
+
 
