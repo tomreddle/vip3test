@@ -1,4 +1,5 @@
 # 给定奇数n ，输出（横、坚、斜的总和相等）
+# 这个不算，自己没有实现
 num = 3
 lis = [[0] * 3]  # 定义一个长度为3的列表
 # 定义一个3*3的列表
@@ -32,6 +33,5 @@ for j in range(1, 9):
             lis[x][y] = j
 for a in range(num):
     for b in range(num):
-        # rjust表示输出01，02，03等这种格式，可看我上篇博文介绍
         print(str(lis[a][b]).rjust(2, '0'), end=' ')
     print(' ')
